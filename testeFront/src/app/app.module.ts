@@ -15,7 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';  
 import {MatInputModule} from '@angular/material/input';  
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
-import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatChipsModule} from '@angular/material/chips'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatButtonModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    MatGridListModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

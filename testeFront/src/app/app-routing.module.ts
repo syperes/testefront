@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: 'dashboard', component: DashboardComponent, children: [
+      { path: '', redirectTo: 'atividades', pathMatch: 'full' },
       { path: 'atividades', component: AtividadesComponent },
       { path: 'resultados', component: ResultadosComponent }
     ]
