@@ -1,0 +1,91 @@
+@import "src/variables.scss";
+
+.results-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+
+    .inner {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $breakpoint-tablet) {
+            width: 90vw;
+        }
+        span {
+            color: $dark-grey;
+            text-align: center;
+            font-size: 32px;
+            padding-bottom: 0.5em;
+        }
+    }
+}
+
+.c-green {
+    color: #00A79D !important
+}
+.c-black {
+    color: #1B2B3A !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-32 {
+    font-size: 32px !important;
+}
+
+.fs-36 {
+    font-size: 36px !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.icon-card {
+    margin: 0.5em;
+}
+
+.clean-button {
+    border: none;
+    background: none;
+    color: $green-text;
+    font-size: 12px;
+    text-align: start;
+}
+
+.up {
+    width: 70px;
+    transform: translateY(20px);
+}
+.green-card {
+    background: #00A79D26;
+    color: #00A79D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 35px 10px 10px 10px;
+}
+
+.btn-plano {
+    background: linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%);
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    width: fit-content;
+    border: transparent;
+    padding: 10px 15px 10px 10px;
+}

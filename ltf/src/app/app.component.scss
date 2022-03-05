@@ -1,0 +1,191 @@
+@import "src/variables.scss";
+.navbar {
+    width: 100%;
+    height: 5.6vh;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.outlet-container {
+    min-height: 94.4vh;
+}
+.pt-10 {
+  padding-top: 10vh;
+}
+
+.hidden-menu {
+    max-height: 80vh !important;
+    height: 80vh !important;
+    margin-top: 4% !important;
+    background: $white;
+}
+
+.mat-drawer {
+    background: $white;
+    color: $white;
+}
+
+.sidenav {
+  position: fixed;
+  padding-top: 10vh;
+}
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 0.5em;
+  }
+
+  .separator {
+      width: 100%;
+      height: 2px;
+      margin-top: 0.5vh;
+      margin-bottom: 0.5vh;
+      background: white;
+  }
+
+  ::ng-deep .firstLevel {
+      margin-left: 100%;
+      margin-top: -35%;
+  }
+
+  ::ng-deep .mat-menu-content {
+    background: $white;
+    color: $white;
+    opacity: 50%;
+    overflow: visible;
+    max-width: none;
+    width: fit-content;
+  }
+
+  ::ng-deep .mat-menu-panel.c-menu {
+    background: #ffffff8f;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+
+  ::ng-deep .mat-menu-item {
+    color: $white;
+  }
+
+  ::ng-deep.mat-dialog-container {
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  ::ng-deep.mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+
+  ::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+  }
+
+  ::ng-deep.mat-mini-fab.no-rad {
+      border-radius: 0 !important;
+      width: 5.6vh !important;
+      height: 5.6vh !important;
+  }
+  ::ng-deep.mat-mini-fab.fab-white {
+      background-color: $white !important;
+      color: $light-grey;
+  }
+
+  ::ng-deep.mat-drawer {
+    background: $blue-gradient !important;
+    width: 5.6vh;
+  }
+
+  .c-white {
+    color: rgb(255 255 255 / 87%);
+  }
+
+  .dot-i {
+    font-size: 1em;
+    transform: translate(15%, 20%);
+    color: $white;
+    opacity: 50%;
+  }
+
+  .m-item {
+    height: 48px;
+    border: none;
+    font-size: 1.5em;
+    width: 100%;
+  }
+  
+  .f-back {
+    color: $white;
+    .dot-i {
+      color: $white;
+      opacity: 50%;
+    }
+    .h-bar {
+      background: $white;
+    }
+  }
+  .h-back {
+    &:hover {
+      color: $white;
+      .dot-i {
+        opacity: 100%;
+        color: $white;
+      }
+      .h-bar {
+        background: $white;
+      }
+    }
+  }
+
+  .h-bar {
+    width: 2px;
+    height: 80%;
+    margin-left: 2px;
+  }
+
+  .b-black {
+    background: black;
+  }
+
+  .a-logo {
+    width: 75px;
+    height: 28px;
+  }
+
+  .t-logo {
+    width: 75px;
+    height: 27px;
+    cursor: pointer;
+    @media (min-width: $breakpoint-phone) {
+      transform: translateX(-130px) scale(1.5);
+    }
+  }
+
+  .px-29 {
+    padding: 0 29px;
+  }
+
+
+  .mw-1 {
+    min-width: 130px;
+  }
+  .mw-2 {
+    min-width: 320px;
+  }
+
+  .hello {
+    color: $nearly-black;
+    margin-left: 0.5em;
+    font-style: italic;
+  }

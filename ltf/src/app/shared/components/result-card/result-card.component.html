@@ -1,0 +1,17 @@
+<mat-card class="d-flex align-items-center justify-content-between">
+    <div class="badge">
+    </div>
+    <div class="px-3">
+        <span class="title">{{name}}</span>
+    </div>
+    <div>
+        <div class="d-flex justify-content-between align-items-center pb-3 w-300">
+            <div class="wing"></div>
+            <div>
+                <span class="score">{{score}}</span>
+                <span class="score-total">/{{scoreTotal}} Flys</span>
+            </div>
+        </div>
+        <mat-progress-bar class="w-300" mode="determinate" [value]="progress"></mat-progress-bar>
+    </div>
+</mat-card>

@@ -1,0 +1,54 @@
+.card {
+    border-radius: 15px;
+    box-shadow: 7px 7px 5px 0px #0000004D;
+    width: 200px;
+    padding: 10px;
+
+    &.sc {
+        background: linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%);
+        .number{
+            background: #00A79D;
+            color: white;
+        }
+        .title {
+            color: white;
+        }
+        .subtitle {
+            color: white;
+        }
+    }
+
+    &.fc {
+        .number{
+            background: #047453;
+            color: white;
+        }
+        .title {
+            color: 
+            #484D5F;
+        }
+        .subtitle {
+            color: 
+            #484D5F;
+        }
+    }
+
+    .number {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}

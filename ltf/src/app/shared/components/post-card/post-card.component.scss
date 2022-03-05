@@ -1,0 +1,33 @@
+@import "src/variables.scss";
+.title {
+    font-size: 16px;
+    color: #6d7780;
+    ;
+}
+.subtitle {
+    font-size: 12px;
+    color: #8d959c;
+}
+.bookmark {
+    color: #bbbfc4;
+}
+.bg{
+    height: 150px;
+    background-size: cover;
+}
+.card-container {
+    overflow: hidden;
+    padding: 0;
+    border-radius: 10px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-20px);
+}
+.clean-button {
+    border: none;
+    background: none;
+    color: $dark-grey;
+    font-size: 12px;
+}
