@@ -1,0 +1,72 @@
+<mat-drawer-container class="container" autosize>
+    <mat-toolbar class="toolbar-container">
+        <span class="greetings">Oi, {{username}} :)</span>
+        <img class="center-img" src="https://learntofly.global/assets/images/icon-white.svg"
+            alt="Learn to Fly!">
+       
+        <div class="search-field">
+            <mat-form-field appearance="outline" class="input-search">
+                <mat-icon matPrefix class="material-icons search">search</mat-icon>
+                <input  matInput placeholder="Buscar">
+            </mat-form-field>
+        </div>
+    </mat-toolbar>
+    <mat-drawer #drawer class="sidenav" mode="side" opened>
+        <div class="drawer-menu">
+            <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+            </button>
+        </div>
+        <div class="home-container">
+            <button mat-button [ngClass]="selectedScreen == 'dashboard' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">house</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">explore</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">calendar_month</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">signpost</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">backpack</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">people</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+            </button>
+        </div>
+        <div class="help-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">help</mat-icon>
+            </button>
+        </div>
+        <div class="icon-container">
+            <button mat-button [ngClass]="selectedScreen == '' ? 'active' : 'inactive'">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">exit_to_app</mat-icon>
+            </button>
+        </div>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+    </div>
+    <router-outlet></router-outlet>
+</mat-drawer-container>

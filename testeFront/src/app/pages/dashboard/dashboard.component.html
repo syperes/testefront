@@ -1,0 +1,22 @@
+<p>dashboard works!</p>
+<div class="banner">
+    <h3 class="banner-title">Comunicação Eficaz</h3>
+    <h5 class="banner-subtitle">Pessoas fazendo a trilha</h5>
+    <h4 class="banner-progress">Progresso</h4>
+    <div class="spinner-container">
+        <mat-progress-spinner class="progress-spinner" [color]="'primary'" [mode]="'determinate'"
+            [value]="'25'">
+        </mat-progress-spinner>
+    </div>
+    <h3 class="banner-percentage">25%</h3>
+</div>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let tab of tabs" (click)="activeLink = tab" [active]="activeLink == tab"
+        [routerLink]="tab" routerLinkActive="active">
+        {{tab}}
+    </a>
+    <a mat-tab-link disabled>
+        Plano de desenvolvimento
+    </a>
+</nav>
+<router-outlet></router-outlet>
