@@ -1,0 +1,26 @@
+<mat-card class="card" [ngStyle]="{'background-image': image ? 'url('+image+')' : null }">
+         <div class="d-flex justify-content-center circle" [ngClass]="{'done': status === 'complete', 'available' : status === 'available', 'locked' : status === 'locked' }">
+             <div *ngIf="status === 'complete'">
+                 <mat-icon class="icon">done</mat-icon>
+             </div>
+             <div *ngIf="status === 'available'">
+                 <span>{{id}}</span>
+             </div>
+             <div *ngIf="status === 'locked'">
+                 <mat-icon class="icon">lock</mat-icon>
+             </div>
+         </div>
+         <div class="d-flex flex-column mw-70">
+            <span class="tag">{{tag}}</span>
+            <span class="title">{{title}}</span>
+            <span class="time"><mat-icon class="icon">schedule</mat-icon> {{time}} minutos</span>
+         </div>
+         <div class="d-flex flex-column">
+             <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+               <mat-icon>favorite</mat-icon>
+             </button>
+            <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" *ngIf="status === 'available'">
+                <mat-icon>navigate_next</mat-icon>
+              </button>
+         </div>
+</mat-card>

@@ -1,0 +1,150 @@
+@import '~@angular/material/theming';
+@include mat-core();
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette0: (
+    50 : #e5f0ff,
+    100 : #bedaff,
+    200 : #93c2ff,
+    300 : #67a9ff,
+    400 : #4796ff,
+    500 : #2684ff,
+    600 : #227cff,
+    700 : #1c71ff,
+    800 : #1767ff,
+    900 : #0d54ff,
+    A100 : #ffffff,
+    A200 : #f6f9ff,
+    A400 : #c3d2ff,
+    A700 : #aabfff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-mcgpalette1: (
+    50 : #ffeae8,
+    100 : #ffc9c6,
+    200 : #ffa6a1,
+    300 : #ff827b,
+    400 : #ff675e,
+    500 : #ff4c42,
+    600 : #ff453c,
+    700 : #ff3c33,
+    800 : #ff332b,
+    900 : #ff241d,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffcfce,
+    A700 : #ffb6b4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-accent: (
+    50 : #eafaec,
+    100 : #c9f4d1,
+    200 : #a6ecb2,
+    300 : #82e493,
+    400 : #67df7b,
+    500 : #4cd964,
+    600 : #45d55c,
+    700 : #3ccf52,
+    800 : #33ca48,
+    900 : #24c036,
+    A100 : #fcfffc,
+    A200 : #c9ffce,
+    A400 : #96ffa1,
+    A700 : #7cff8a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-darkpallete: (
+    50 : #f6f6f6,
+    100 : #e8e8e8,
+    200 : #d8d8d8,
+    300 : #c8c8c8,
+    400 : #bdbdbd,
+    500 : #b1b1b1,
+    600 : #aaaaaa,
+    700 : #a1a1a1,
+    800 : #989898,
+    900 : #888888,
+    A100 : #ffffff,
+    A200 : #fdebeb,
+    A400 : #ffb6b6,
+    A700 : #ff9c9c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-app-primary: mat-palette($md-mcgpalette0);
+$my-app-warn: mat-palette($md-darkpallete);
+$my-app-accent:  mat-palette($md-accent, 500, 900, A100);
+// $my-app-warn:    mat-palette($md-mcgpalette1);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+$custom-typography: mat-typography-config($font-family: '"Lato", sans-serif;');
+@include mat-core($custom-typography);

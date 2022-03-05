@@ -1,0 +1,17 @@
+$white: #ffffff;
+$dark-grey: #6F727B;
+$light-grey: #E8E8E8;
+$purple: #660099;
+$darkest-grey: hsl(0, 0%, 12%);
+$nearly-black: #1B2B3A;
+$green: #4CD964;
+$green-text: #00A79D;
+$dark-green: #047453;
+$red: #FF4C42;
+$yellow: #c1b031;
+$blue-gradient: linear-gradient(180deg, #2684FF 0%, #23BFB6 100%);
+$breakpoints: (phone: 640px, 
+               tablet: 768px, 
+               desktop: 1024px) !default;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 640px;

@@ -1,0 +1,53 @@
+<div class="results-container">
+    <div class="inner">
+        <app-result-card class="mat-elevation-z3" [name]="name" [score]="score" [scoreTotal]="scoreTotal" [progress]="progress"></app-result-card>
+        <span class="c-green fs-14 bold py-3">COMPLETADO 23/12/2021</span>
+        <div class="d-flex justify-content-center align-items-center py-3">
+            <img src="./../../../assets/img/Think.svg" alt="think">
+            <div class="d-flex flex-column aligm-items-start justify-content-start">
+                <span class="c-black fs-24 text-start">{{title1}}</span>
+                <span class="c-green fs-36 bold text-start">{{title2}}</span>
+            </div>
+        </div>
+            <p class="c-black fs-14 py-3">{{text}}</p>
+            <div class="section">
+                <mat-icon class="c-green">trending_up</mat-icon>
+                <span class="c-green fs-24 pl-2">Suas forças</span>
+            </div>
+            <div class="d-flex">
+                <app-skill-card class="p-2" *ngFor="let card of skillCards" [title]="card.name" [description]="card.description" [level]="card.level" [success]="true"></app-skill-card>
+            </div>
+            <div class="section">
+                <mat-icon class="c-green">volunteer_activism</mat-icon>
+                <span class="c-green fs-24 pl-2">Suas areas de desenvolvimento</span>
+            </div>
+            <div class="d-flex">
+                <app-skill-card class="p-2" *ngFor="let card of devCards" [title]="card.name" [description]="card.description" [level]="card.level" [success]="false"></app-skill-card>
+            </div>
+            <span class="c-green fs-18 py-3">EXPLORE SEUS RESULTADOS EM CADA PILAR</span>
+            <img src="./../../../assets/img/Frame 2304.png" style="width: 50vw" alt="mock">
+            <div class="d-flex justify-content-center">
+                <app-icon-card *ngFor="let card of iconCards" [icon]="card.icon" [title]="card.name" class="icon-card"></app-icon-card>
+            </div>
+            <span class="c-green fs-18 py-3">HOJE SUA COMUNICAÇÃO TEM</span>
+            <div class="d-flex justify-content-around align-items-center">
+                <img src="./../../../assets/img/talk.svg" alt="">
+                <span>{{gradeDescription}}</span>
+                <div>
+                    <span>{{grade}}</span>
+                </div>
+            </div>
+            <p class="c-black fs-14">{{gradeText}}</p>
+            <button class="clean-button">Ver relatorio completo</button>
+
+            <div class="d-flex justify-content-center">
+                <img class="up" src="./../../../assets/img/up.svg" alt="">
+            </div>
+            <div class="green-card">
+                <p>Com seus resultados em mãos, é hora de criar seu plano de desenvolvimento para colocar em prática os conceitos, recursos e dicas que aprendemos ao longo da trilha. </p>
+            </div>
+            <div class="d-flex justify-content-center py-3">
+                <button class="btn-plano">Ver meu plano</button>
+            </div>
+    </div>
+</div>

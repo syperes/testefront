@@ -1,0 +1,68 @@
+<div class="navbar">
+  <div>
+    <button mat-mini-fab color="primary" class="mat-elevation-z0 no-rad" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span *ngIf="!mobile" class="hello">{{helloMessage}}</span>
+  </div>
+  <img src="assets/img/logo.svg" alt="Lean to Fly" class="t-logo" [routerLink]="['/home']" *ngIf="!mobile">
+  <img src="assets/img/logo2.svg" alt="Lean to Fly" class="t-logo" [routerLink]="['/home']" *ngIf="mobile">
+  <div></div>
+</div>
+<div>
+  <mat-drawer-container class="outlet-container" hasBackdrop="false">
+    <mat-drawer #drawer class="sidenav" mode="over">
+      <div>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">home</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">explore</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">calendar_month</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">signpost</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">backpack</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">people</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">person</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center mt-5 p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">info</mat-icon>
+        </button>
+        <button mat-menu-item [routerLink]="['/']"
+          class="d-flex justify-content-start align-items-center p-0 m-item h-back">
+          <div class="h-bar"></div>
+          <mat-icon class="dot-i mr-0">logout</mat-icon>
+        </button>
+      </div>
+    </mat-drawer>
+    <div class="h-100">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div>
+
