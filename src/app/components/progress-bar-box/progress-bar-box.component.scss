@@ -1,0 +1,120 @@
+@import "../../../styles/variables";
+
+.progress-box {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  padding: 20px;
+
+  .certificate {
+    display: flex;
+    flex-basis: 40%;
+
+    @media #{$xs} {
+      flex-basis: 50%;
+    }
+
+    img {
+      margin-right: 15px;
+
+      @media #{$xs} {
+        width: 29px;
+        height: 40px;
+      }
+
+    }
+
+    .certificate-name {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0.005em;
+      color: #484D5F;
+      width: 50%;
+
+      @media #{$xs} {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .progress-detail {
+    flex-grow: 1;
+
+    .points {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #23BFB6;
+      opacity: 0.8;
+
+      @media #{$xs} {
+        font-size: 16px;
+        line-height: 19.2px;
+      }
+
+      .fly-image {
+        margin-top: 2px;
+
+        @media #{$xs} {
+          img {
+            max-width: 41px;
+          }
+        }
+      }
+
+      .level-max {
+        font-size: 16px;
+        font-weight: normal;
+
+        @media #{$xs} {
+          font-size: 12px;
+          line-height: 14.2px;
+        }
+      }
+    }
+  }
+
+  .progress-bar {
+    margin-top: 15px;
+    border-radius: 1000px;
+    height: 7px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #DDD;
+
+    &:before, &:after {
+      position: absolute;
+      top: 1px;
+      content: ' ';
+      width: 4px;
+      height: 4px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &:before {
+      left: 30%;
+    }
+    &:after {
+      left: 70%;
+    }
+
+    .inner-bar {
+      height: 9px;
+      margin-top: -1px;
+      width: 0%;
+      background-color: #2684FF;
+
+      @media #{$xs} {
+        background-color: #00A79D;
+      }
+    }
+  }
+}

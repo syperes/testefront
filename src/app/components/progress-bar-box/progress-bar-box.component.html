@@ -1,0 +1,17 @@
+<div class="progress-box">
+  <div class="certificate">
+    <img [src]="certificateImage">
+    <div class="certificate-name">{{certificateName}}</div>
+  </div>
+  <div class="progress-detail">
+    <div class="points">
+      <div class="fly-image"><img src="assets/images/wings.png" alt=""></div>
+      <div class="user-points">
+        <span class="reached">{{currentPoints}}</span>/<span class="level-max">{{maxLevelPoints}} {{pointsLabel}}</span>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="inner-bar" [style.width]="barLength+'%'"></div>
+    </div>
+  </div>
+</div>

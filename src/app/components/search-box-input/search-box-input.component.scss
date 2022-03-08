@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+
+.input-wrapper {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  border: 1px solid rgba(27, 43, 58, 0.2);
+  box-sizing: border-box;
+  border-radius: 15.5px;
+  padding: 5px 10px;
+
+  &:before {
+    content: ' ';
+    background: url('/assets/images/search-icon.png') no-repeat center center;
+    background-size: 90%;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+
+  input {
+    border: none;
+    background-color: transparent;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: black;
+
+    &:placeholder-shown {
+      @extend %textStyle1;
+    }
+
+    /*::placeholder {
+      @extend %textStyle1;
+    }*/
+  }
+}

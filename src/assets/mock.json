@@ -1,0 +1,121 @@
+{
+  "activities": {
+    "meetYourSelf": [
+      {
+        "title": "Minha comunicação é clara?",
+        "tags": [
+          "Identificar"
+        ],
+        "step": "1",
+        "status": "done",
+        "publishedAt": "2 minutos",
+        "bgImage": "/assets/images/activity-card-image.png",
+        "mobileBgImage": "/assets/images/activity-card-image-mobile.png"
+      }
+    ],
+    "improveYourself": [
+      {
+        "title": "Comunicação consciente",
+        "tags": [
+          "Aprender"
+        ],
+        "step": "2",
+        "status": "available",
+        "publishedAt": "4 minutos",
+        "link": "link-para-pagina"
+      },
+      {
+        "title": "10 práticas para uma boa comunicação",
+        "tags": [
+          "Praticar"
+        ],
+        "step": "3",
+        "status": "locked",
+        "publishedAt": "10 minutos"
+      },
+      {
+        "title": "4 regras da boa comunicação",
+        "tags": [
+          "Mapear"
+        ],
+        "step": "4",
+        "status": "locked",
+        "publishedAt": "12 minutos"
+      }
+    ],
+    "recommendedContents": [
+      {
+        "title": "What Your Most Vivid Memories Say About You",
+        "description": "Even when we believe that we’ve created a happy, ideal life for…",
+        "bgImage": "/assets/images/placeholders/photo.jpg",
+        "iconPath": "/assets/images/flat.png"
+      },
+      {
+        "title": "What Your Most Vivid Memories Say About You",
+        "description": "Even when we believe that we’ve created a happy, ideal life for…",
+        "bgImage": "/assets/images/placeholders/photo.jpg",
+        "iconPath": "/assets/images/flat.png"
+      },
+      {
+        "title": "What Your Most Vivid Memories Say About You",
+        "description": "Even when we believe that we’ve created a happy, ideal life for…",
+        "bgImage": "/assets/images/placeholders/photo.jpg",
+        "iconPath": "/assets/images/flat.png"
+      }
+    ]
+  },
+  "results": {
+    "certificate": {
+      "certificateName": "Comunicação Eficaz",
+      "currentPoints": "150",
+      "maxLevelPoints": "150",
+      "pointsLabel": "Flys"
+    },
+    "feedback": {
+      "finishedAt": "23/12/2021"
+    },
+    "strengths": [
+      {
+        "cardName": "Objetividade",
+        "cardText": "Se expressar de forma objetiva e firme.",
+        "cardNumber": "1",
+        "cardNumberBg": "#00A79D",
+        "cardBg": "gradient"
+      },
+      {
+        "cardName": "Compreensão",
+        "cardText": "Compreender e ser compreendido de maneira precisa pelas pessoas.",
+        "cardNumber": "2",
+        "cardNumberBg": "#5AD3A0",
+        "cardBg": "gradient"
+      }
+    ],
+    "areas": [
+      {
+        "cardName": "Compreensão",
+        "cardText": "Compreender e ser compreendido de maneira precisa pelas pessoas.",
+        "cardNumber": "1",
+        "cardNumberBg": "#5AD3A0",
+        "cardBg": ""
+      }
+    ],
+    "exploreGraphic": [
+      {
+        "label": "Clareza",
+        "value": 35,
+        "color": "#00A79D"
+      },
+      {
+        "label": "Objetividade",
+        "value": 30,
+        "color": "#5AD3A0"
+      },
+      {
+        "label": "Compreensão",
+        "value": 40,
+        "color": "#047453"
+      }
+    ],
+    "grade": 5.5
+  }
+}

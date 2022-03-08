@@ -1,0 +1,201 @@
+@import "../styles/variables.scss";
+
+header {
+
+  @media #{$xs} {
+    display: flex;
+  }
+}
+
+nav {
+  width: 70px;
+  background: linear-gradient(180deg, #2684FF 0%, #23BFB6 100%);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: column;
+
+  @media #{$xs} {
+    position: static;
+    flex-basis: 70px;
+    padding-bottom: 0;
+  }
+
+  ul {
+    height: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    //justify-content: space-between;
+    align-items: center;
+
+    &.bottom-items {
+      margin-top: auto;
+
+      @media #{$xs} {
+        display: none;
+      }
+    }
+
+    li {
+      width: 100%;
+      min-height: 42px;
+      max-height: 42px;
+      align-self: flex-start;
+      justify-self: flex-start;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      position: relative;
+
+      @media #{$xs} {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+
+      &:not(.menu-toggle-button) {
+        margin: 10px 0;
+      }
+
+      &.footer {
+        margin: 5px 0;
+
+        &:first-child {
+          margin-top: 70px;
+        }
+
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+
+      &:before {
+        content: ' ';
+        width: 2px;
+        height: 100%;
+        background-color: transparent;
+        margin-left: 2px;
+        transition: background-color .5s;
+        position: absolute;
+      }
+
+      &:not(.menu-toggle-button):hover:before {
+        background-color: white;
+      }
+
+      &:not(.menu-toggle-button).active:before {
+        //border-left: 2px solid white;
+        background-color: white;
+      }
+
+      a, button {
+        background: transparent no-repeat center center;
+        background-image: var(--icon-name);
+        background-size: 32px 32px;
+        //width: 32px;
+        //height: 32px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: table;
+        margin: auto;
+        //padding: 20px 0;
+      }
+
+      &.menu-toggle-button {
+        cursor: pointer;
+        height: 60px;
+        max-height: 60px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        transition: background-color .5s;
+
+        @media #{$xs} {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+          background-image: url('/assets/images/menu-items/hamburger.svg');
+        }
+      }
+    }
+  }
+}
+
+.top-bar {
+  height: 60px;
+
+  @media #{$xs} {
+    flex-grow: 1;
+  }
+
+  .root-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+
+    @media #{$xs} {
+      padding: 0;
+      width: 100%;
+    }
+
+    .welcome {
+      @extend %ff_primary;
+      @extend %textStyle2;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 20px;
+
+      @media #{$xs} {
+        display: none;
+      }
+    }
+
+    .platform-logo {
+      flex-grow: 1;
+      height: 100%;
+      background: url('/assets/images/learn-to-fly-logo.png') no-repeat center center;
+      background-size: 162.93px;
+
+      @media #{$xs} {
+        background-image: url('/assets/images/learn-to-fly-logo-colorful.png');
+        background-size: 133px;
+        text-align: center;
+      }
+
+      img {
+        max-height: 35px;
+      }
+    }
+
+    .search-box {
+
+      @media #{$xs} {
+        width: 48px;
+        height: 100%;
+        background: url('/assets/images/search.svg') no-repeat center center;
+        background-size: 90%;
+        border-left: 1px solid #DDD;
+
+        app-search-box-input {
+          display: none;
+        }
+
+
+      }
+    }
+  }
+}

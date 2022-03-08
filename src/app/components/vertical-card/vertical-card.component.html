@@ -1,0 +1,14 @@
+<div class="vertical-card">
+  <div class="featured-image" [style.background-image]="'url('+bgImage+')'">
+
+    <div class="circle-box-icon" [style.background-image]="'url('+iconPath+')'"></div>
+  </div>
+  <div class="content">
+    <div class="title">{{title}}</div>
+    <div class="description">{{description}}</div>
+    <div class="actions">
+      <a href="javascript:void(0)" (click)="onClickReadMore()" class="read-more">Leia mais</a>
+      <a href="javascript:void(0)" class="save" (click)="onClickSave()"><img src="/assets/images/save.png"></a>
+    </div>
+  </div>
+</div>

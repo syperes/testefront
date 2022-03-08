@@ -1,0 +1,34 @@
+@import "../../../styles/variables.scss";
+
+.tabs {
+  display: flex;
+  border-bottom: #F2F3F5 solid 2px;
+  padding: 0 20px;
+
+  @media #{$xs} {
+    overflow: hidden;
+    padding-left: 0;
+  }
+
+  a {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 20px 0;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #BBBBBB;
+    margin-bottom: -2px;
+    white-space: nowrap;
+
+    @media #{$xs} {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.005em;
+    }
+
+    &.active {
+      color: black;
+      border-bottom: 4px solid #B1B1B1;
+    }
+  }
+}

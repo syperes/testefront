@@ -1,0 +1,70 @@
+@import "../../../styles/variables";
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.302);
+  border-radius: 16px;
+  padding: 15px;
+
+  @media #{$xs} {
+    min-height: 170px;
+  }
+
+  &.gradient {
+    background: linear-gradient(45deg, #33B8B0 0%, #5FECB4 100%);
+
+    .name, .text {
+      color: white;
+    }
+  }
+
+  .name, .text {
+    color: #484D5F;
+  }
+
+  .header {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    .number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #047453;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+
+      @media #{$xs} {
+        font-weight: bold;
+        font-size: 13.0164px;
+        line-height: 18px;
+      }
+    }
+    .name {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+
+      @media #{$xs} {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 26px;
+
+    @media #{$xs} {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

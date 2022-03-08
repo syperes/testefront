@@ -1,0 +1,16 @@
+@import "devices";
+
+$textColorPrimary: #8d959c;
+
+%textStyle1 {
+  color: #1B2B3A;
+  opacity: .5;
+}
+%textStyle2 {
+  color: #1B2B3A;
+  opacity: .7;
+}
+
+%ff_primary {
+  font-family: 'Lato', sans-serif !important;
+}

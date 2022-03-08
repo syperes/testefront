@@ -1,0 +1,26 @@
+<header>
+  <nav>
+
+    <ul>
+      <li class="menu-toggle-button"><button></button></li>
+      <li [style]="{'--icon-name': getIconPath(item.icon)}" [class.active]="item.isActive" *ngFor="let item of getMenuItems(false)"><a href=""></a></li>
+    </ul>
+
+    <ul class="bottom-items">
+      <li class="footer" [style]="{'--icon-name': getIconPath(item.icon)}" [class.active]="item.isActive" *ngFor="let item of getMenuItems(true)"><a href=""></a></li>
+    </ul>
+
+  </nav>
+  <div class="top-bar">
+    <div class="root-container">
+      <div class="welcome">Oi, Flávia :)</div>
+      <div class="platform-logo"><!--<img src="/assets/images/learn-to-fly-logo.png">--></div>
+      <div class="search-box">
+        <app-search-box-input></app-search-box-input>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="root-container">
+  <router-outlet></router-outlet>
+</div>
