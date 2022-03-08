@@ -1,0 +1,4 @@
+<div class="tabs">
+
+  <a href="javascript: void(0);" (click)="changeTab(item)" [class.active]="item.key == currentActiveKey" *ngFor="let item of items">{{item.label}}</a>
+</div>

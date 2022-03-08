@@ -1,0 +1,33 @@
+<section class="header">
+  <div class="content">
+    <div class="infos">
+      <h2>Comunicação Eficaz <a href="" class="help-button"><img src="/assets/images/circle-question-icon.png" alt="Ajuda"></a></h2>
+      <div class="people-on-trail">
+        <div class="text">Pessoas fazendo a trilha</div>
+        <div class="persons">
+          <app-person-abbr abbr="BS" color="#C0DCD3"></app-person-abbr>
+          <app-person-abbr abbr="AT" color="#B0EFFD"></app-person-abbr>
+          <app-person-abbr abbr="GR" color="#E9B3DA"></app-person-abbr>
+          <div class="and-more-x">
+            +20
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chart" *ngIf="chartOptions">
+      <div class="title">Progresso</div>
+      <div class="chart-wrapper">
+        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [plotOptions]="chartOptions.plotOptions" [fill]="chartOptions.fill" [stroke]="chartOptions.stroke" [responsive]="chartOptions.responsive"></apx-chart>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tabs-contents">
+  <app-tabs-segment class="tabs" [items]="tabItems" [currentActiveKey]="currentTab" (onChangeTab)="onChangeTab($event)"></app-tabs-segment>
+  <div [ngSwitch]="currentTab" class="tab-content-wrapper">
+    <home-activities *ngSwitchCase="'activities'"></home-activities>
+    <home-results *ngSwitchCase="'results'"></home-results>
+  </div>
+</section>
+

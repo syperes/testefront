@@ -1,0 +1,95 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "../../../../../styles/variables";
+
+
+section:not(.header):not(.tabs-contents) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #666D86;
+  font-weight: 400;
+
+  @media #{$xs} {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.navigation-options {
+  display: table;
+  width: auto;
+  margin: auto;
+
+  app-button-icon-vertical {
+    display: inline-block;
+    width: 101px;
+    margin: 0 2.5px;
+  }
+}
+
+section {
+
+  &.meet-yourself {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #666D86;
+    font-weight: 400;
+
+    &.green {
+      font-weight: bold;
+      color: #00A79D;
+    }
+  }
+
+  app-activity-card {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &.recomended-contents {
+    margin-bottom: 50px;
+
+    .slide-cards-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+
+      .swiper-pagination-bullets {
+        bottom: 5px;
+
+        .swiper-pagination-bullet {
+          background-color: #9DA0A8;
+          opacity: .5;
+          //width: 5px;
+          //height: 5px;
+          transform: scale(1) !important;
+
+          &.swiper-pagination-bullet-active {
+            //background-color: #9DA0A8;
+            opacity: 1;
+          }
+        }
+      }
+
+      .swiper-slide {
+        display: block;
+        width: calc(33% - 10px);
+
+        @media #{$xs} {
+          width: 60%;
+        }
+        //margin: 0 5px;
+      }
+    }
+  }
+}

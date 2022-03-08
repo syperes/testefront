@@ -1,0 +1,7 @@
+<div class="card" [class.gradient]="cardBg == 'gradient'" [style.background]="cardBg != 'gradient' ? cardBg : ''" [style.color]="cardTextColor">
+  <div class="header">
+    <div class="number" [style.background-color]="cardNumberBg">{{cardNumber}}</div>
+    <div class="name">{{cardName}}</div>
+  </div>
+  <div class="text">{{cardText}}</div>
+</div>

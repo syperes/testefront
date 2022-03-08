@@ -1,0 +1,16 @@
+<div (click)="onClick()" class="card" [class.has-no-bg]="!bgImage" [class.has-link]="link" [style]="{'--desktopBg': 'url('+bgImage+')', '--mobileBg': 'url('+mobileBgImage+')'}" [attr.data-status]="status">
+  <div class="step">
+    <div class="circle-step">{{step}}</div>
+  </div>
+  <div class="detail">
+    <div class="tags">
+      <span *ngFor="let tag of tags">{{tag}}</span>
+    </div>
+    <div class="title">{{title}}</div>
+    <div class="published-at"><img [src]="'/assets/images/access-time'+(!bgImage ? '-alt' : '')+'.svg'" alt=""> {{publishedAt}}</div>
+  </div>
+  <div class="actions">
+    <a class="favorite" (click)="favorite($event)"><img [src]="'/assets/images/heart-favorite-'+(!bgImage ? 'dark-' : '')+'icon.svg'"></a>
+    <a class="link" *ngIf="link"><img src="/assets/images/arrow.svg"></a>
+  </div>
+</div>

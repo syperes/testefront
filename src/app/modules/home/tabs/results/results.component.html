@@ -1,0 +1,132 @@
+<section class="progress">
+  <app-progress-bar-box certificateImage="assets/images/gold-medal.png" [certificateName]="certificateData.certificateName" [currentPoints]="certificateData.currentPoints" [maxLevelPoints]="certificateData.maxLevelPoints" [pointsLabel]="certificateData.pointsLabel"></app-progress-bar-box>
+</section>
+
+<section class="feedback">
+  <div class="finished-at">Completado 23/12/2021</div>
+  <div class="title-box">
+    <img src="/assets/images/little-monsters.png">
+    <div class="titles">
+      <h4>Hoje sua comunicação</h4>
+      <h3>Ainda não é eficaz</h3>
+    </div>
+  </div>
+  <div class="feedback-text">
+    Você faz parte do grupo de pessoas que ainda podem desenvolver sua comunicação como uma ferramenta poderosa na sua vida social.  Você ainda tem certa dificuldade de expressar suas ideias e emoções com clareza e objetividade, adaptar sua fala ao contexto social de cada situação, além de compreender e ser facilmente compreendido pelos outros. Vamos aprender como desenvolver essas habilidades?
+  </div>
+
+  <div class="feedback-slide-cards">
+
+    <h5><img src="/assets/images/graphic.png"> Suas forças</h5>
+    <swiper class="card-slide-wrapper"
+            [pagination]="swiperSlidePagination"
+            [slidesPerView]="'auto'"
+            [spaceBetween]="20"
+            [breakpoints]="swiperSlideBreakpoints"
+    >
+<!--    <div class="card-slide-wrapper">-->
+      <ng-template swiperSlide>
+        <app-rectangle-rounded-card cardNumber="1" cardNumberBg="#00A79D" cardName="Objetividade" cardText="Se expressar de forma objetiva e firme." cardBg="gradient"></app-rectangle-rounded-card>
+      </ng-template>
+      <ng-template swiperSlide>
+          <app-rectangle-rounded-card cardNumber="2" cardNumberBg="#5AD3A0" cardName="Compreensão" cardText="Compreender e ser compreendido de maneira precisa pelas pessoas." cardBg="gradient"></app-rectangle-rounded-card>
+      </ng-template>
+      <!--    </div>-->
+    </swiper>
+
+    <h5><img src="/assets/images/hand-holding-seedling.png"> Suas áreas de desenvolvimento</h5>
+    <swiper class="card-slide-wrapper"
+            [pagination]="swiperSlidePagination"
+            [slidesPerView]="'auto'"
+            [spaceBetween]="20"
+            [breakpoints]="swiperSlideBreakpoints"
+    >
+    <!--    <div class="card-slide-wrapper">-->
+      <ng-template swiperSlide>
+        <app-rectangle-rounded-card cardNumber="1" cardName="Clareza" cardText="Passar o conteúdo da sua mensagem de forma clara  e consciente."></app-rectangle-rounded-card>
+      </ng-template>
+    </swiper>
+<!--    </div>-->
+
+  </div>
+</section>
+
+<section class="explore-results">
+
+  <h3>Explore seus resultados em cada pilar</h3>
+
+  <div class="chart-wrapper">
+    <div id="chart">
+
+      <!--<div class="floating-labels">
+        <div class="comprehension" data-value="Compreensão">Compreensão</div>
+        <div class="lightness" data-value="Clareza">Clareza</div>
+        <div class="objectivity" data-value="Objetividade">Objetividade</div>
+      </div>-->
+      <apx-chart
+        [series]="chartSeries"
+        [chart]="chart"
+        [labels]="chartLabels"
+        [title]="chartTitle"
+        [theme]="chartTheme"
+        [fill]="chartFill"
+        [yaxis]="chartYaxis"
+        [stroke]="chartStroke"
+        [legend]="chartLegend"
+        [plotOptions]="chartPlotOptions"
+      ></apx-chart>
+    </div>
+  </div>
+
+  <div class="navigation-options">
+    <app-button-icon-vertical label="Clareza" icon="/assets/images/sun-icon.svg" [active]="true"></app-button-icon-vertical>
+    <app-button-icon-vertical label="Objetividade" icon="/assets/images/target-icon.svg"></app-button-icon-vertical>
+    <app-button-icon-vertical label="Compreensão" icon="/assets/images/crossed-heart-icon.svg"></app-button-icon-vertical>
+  </div>
+</section>
+
+<section class="about-communication">
+  <h3>Hoje sua comunicação tem</h3>
+
+  <div class="grades">
+    <div class="left-chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [plotOptions]="chartOptions.plotOptions"
+        [labels]="chartOptions.labels"
+        [stroke]="chartOptions.stroke"
+        [fill]="chartOptions.fill"
+        [responsive]="chartOptions.responsive"
+      ></apx-chart>
+    </div>
+    <h2>CLAREZA BAIXA</h2>
+    <div class="right-chart">
+      <div class="grade-number">5.5</div>
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [plotOptions]="chartOptions.plotOptions"
+        [labels]="chartOptions.labels"
+        [stroke]="chartOptions.stroke"
+        [fill]="chartOptions.fill"
+        [responsive]="chartOptions.responsive"
+      ></apx-chart>
+    </div>
+  </div>
+
+  <div class="feedback-text">
+    Você tem dificuldade de expressar suas ideias e opiniões de forma clara e precisa. Isso acontece porque você geralmente não consegue se manter presente nas conversas, prestando atenção tanto nos seus próprios pensamentos, quanto no que acontece ao seu redor. É comum você se sentir no piloto automático, como se não fosse o dono das suas próprias palavras.
+  </div>
+  <a class="report-link" href="javascript:void(0)">Ver relatório completo</a>
+</section>
+
+<section class="create-plan">
+
+  <div class="trophy-text-box">
+    Com seus resultados em mãos, é hora de criar seu plano de desenvolvimento para colocar em prática os conceitos, recursos e dicas que aprendemos ao longo da trilha.
+  </div>
+
+  <app-button label="Ver meu plano"></app-button>
+
+</section>

@@ -1,0 +1,151 @@
+@import "../../../styles/variables.scss";
+
+$boxTextcolor: white;
+
+section {
+  @media #{$xs} {
+    &:not(.header):not(.tabs-contents) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+section.header {
+  background: #76DD9E url('/assets/images/home-header-bg.svg') no-repeat left -45px center;
+  //background-size: 90%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+
+  @media #{$xs} {
+    min-height: 190px;
+    padding: 10px 20px 0;
+    background: url('/assets/images/home-header-mobile.png') center center no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: -80px;
+
+    @media #{$xs} {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    .infos {
+
+      @media #{$xs} {
+        flex-basis: 60%;
+      }
+
+      h2 {
+        font-size: 48px;
+        line-height: 56px;
+        color: $boxTextcolor;
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+
+        @media #{$xs} {
+          font-size: 36px;
+          line-height: 44px;
+        }
+
+        .help-button {
+          margin-left: 35px;
+
+          img {
+            width: 29px;
+            height: 29px;
+          }
+        }
+      }
+
+      .people-on-trail {
+        margin-top: 20px;
+
+        .text {
+          font-size: 16px;
+          line-height: 26px;
+          color: $boxTextcolor;
+          font-weight: 400;
+
+          @media #{$xs} {
+            font-size: 12px;
+            line-height: 14.54px;
+          }
+        }
+
+        .persons {
+          margin-top: 3px;
+          display: flex;
+          align-items: center;
+
+          app-person-abbr {
+            margin: auto 5px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+
+          .and-more-x {
+            font-size: 16px;
+            line-height: 24px;
+            color: black;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .chart {
+      margin-left: 30px;
+
+      @media #{$xs} {
+        margin-left: 30px;
+        flex-basis: 40%;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: $boxTextcolor;
+      }
+
+      .chart-wrapper {
+        width: 230px;
+        display: block;
+
+        .apexcharts-text.apexcharts-datalabel-value {
+          font-size: 2px !important;
+        }
+
+        @media #{$xs} {
+          width: 90px;
+          margin: 10px auto 0;
+        }
+
+      }
+    }
+  }
+}
+
+section.tabs-contents {
+
+  .tabs {
+    margin-top: 15px;
+    display: block;
+  }
+
+  .tab-content-wrapper {
+    max-width: 676px;
+    margin: auto;
+  }
+}

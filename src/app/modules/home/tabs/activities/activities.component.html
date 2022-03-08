@@ -1,0 +1,38 @@
+<section>
+  <h1>Pilares da Comunicação Eficaz</h1>
+  <div class="navigation-options">
+    <app-button-icon-vertical label="Clareza" icon="/assets/images/sun-icon.svg" [active]="true"></app-button-icon-vertical>
+    <app-button-icon-vertical label="Objetividade" icon="/assets/images/target-icon.svg"></app-button-icon-vertical>
+    <app-button-icon-vertical label="Compreensão" icon="/assets/images/crossed-heart-icon.svg"></app-button-icon-vertical>
+  </div>
+</section>
+
+<section class="meet-yourself">
+  <h3>Descubra mais sobre você</h3>
+  <div class="cards">
+    <app-activity-card *ngFor="let card of meetYourselfCards" [step]="card.step" [title]="card.title" [tags]="card.tags" [publishedAt]="card.publishedAt" [bgImage]="card.bgImage"  [mobileBgImage]="card.mobileBgImage" [status]="card.status"></app-activity-card>
+  </div>
+</section>
+
+<section class="improve-yourself">
+  <h3>Desenvolva suas habilidades</h3>
+  <div class="cards">
+    <app-activity-card *ngFor="let card of improveYourselfCards" [step]="card.step" [title]="card.title" [tags]="card.tags" [publishedAt]="card.publishedAt" [status]="card.status" [link]="card.link"></app-activity-card>
+  </div>
+</section>
+
+<section class="recomended-contents">
+  <h3 class="green">Conteúdos recomendados</h3>
+
+  <swiper class="slide-cards-wrapper"
+    [pagination]="swiperSlidePagination"
+    [slidesPerView]="'auto'"
+    [spaceBetween]="50"
+    [breakpoints]="swiperSlideBreakpoints"
+  >
+    <ng-template swiperSlide *ngFor="let card of recomendedContentSlides">
+      <app-vertical-card [title]="card.title" [description]="card.description" [bgImage]="card.bgImage" [iconPath]="card.iconPath"></app-vertical-card>
+    </ng-template>
+  </swiper>
+</section>
+
