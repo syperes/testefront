@@ -20,7 +20,7 @@
           "Aprender"
         ],
         "step": "2",
-        "status": "done",
+        "status": "available",
         "publishedAt": "4 minutos",
         "link": "link-para-pagina"
       },
@@ -43,7 +43,7 @@
         "publishedAt": "12 minutos"
       }
     ],
-    "recomendedContents": [
+    "recommendedContents": [
       {
         "title": "What Your Most Vivid Memories Say About You",
         "description": "Even when we believe that we’ve created a happy, ideal life for…",
@@ -94,7 +94,7 @@
       {
         "cardName": "Compreensão",
         "cardText": "Compreender e ser compreendido de maneira precisa pelas pessoas.",
-        "cardNumber": "2",
+        "cardNumber": "1",
         "cardNumberBg": "#5AD3A0",
         "cardBg": ""
       }

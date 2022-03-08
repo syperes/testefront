@@ -163,10 +163,10 @@ section {
 
         .swiper-slide {
           display: block;
-          width: calc(48% - 10px);
+          width: calc(50% - 15px) !important;
 
           @media #{$xs} {
-            width: 48%;
+            width: 48% !important;
           }
           //margin: 0 5px;
         }

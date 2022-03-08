@@ -18,6 +18,7 @@ export class ActivitiesComponent implements OnInit {
 
   public swiperSlideBreakpoints = {
       '320': {
+        slidesPerView: 2,
         spaceBetween: 20
       },
       '768': {
@@ -32,13 +33,13 @@ export class ActivitiesComponent implements OnInit {
 
   public meetYourselfCards: any[] = [];
   public improveYourselfCards: any[] = [];
-  public recomendedContentSlides: any[] = [];
+  public recommendedContentSlides: any[] = [];
 
   constructor(private api: ApiRequestsService) {
     this.api.getDataFromApi().subscribe((data: any) => {
       this.meetYourselfCards = data.activities.meetYourSelf;
       this.improveYourselfCards = data.activities.improveYourself;
-      this.recomendedContentSlides = data.activities.recomendedContents;
+      this.recommendedContentSlides = data.activities.recommendedContents;
     });
 
   }

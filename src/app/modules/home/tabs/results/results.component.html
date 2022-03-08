@@ -3,7 +3,7 @@
 </section>
 
 <section class="feedback">
-  <div class="finished-at">Completado 23/12/2021</div>
+  <div class="finished-at">Completado {{finishedAt}}</div>
   <div class="title-box">
     <img src="/assets/images/little-monsters.png">
     <div class="titles">
@@ -25,11 +25,8 @@
             [breakpoints]="swiperSlideBreakpoints"
     >
 <!--    <div class="card-slide-wrapper">-->
-      <ng-template swiperSlide>
-        <app-rectangle-rounded-card cardNumber="1" cardNumberBg="#00A79D" cardName="Objetividade" cardText="Se expressar de forma objetiva e firme." cardBg="gradient"></app-rectangle-rounded-card>
-      </ng-template>
-      <ng-template swiperSlide>
-          <app-rectangle-rounded-card cardNumber="2" cardNumberBg="#5AD3A0" cardName="Compreensão" cardText="Compreender e ser compreendido de maneira precisa pelas pessoas." cardBg="gradient"></app-rectangle-rounded-card>
+      <ng-template swiperSlide *ngFor="let card of strengths">
+        <app-rectangle-rounded-card [cardNumber]="card.cardNumber" [cardNumberBg]="card.cardNumberBg" [cardName]="card.cardName" [cardText]="card.cardText" [cardBg]="card.cardBg"></app-rectangle-rounded-card>
       </ng-template>
       <!--    </div>-->
     </swiper>
@@ -38,15 +35,13 @@
     <swiper class="card-slide-wrapper"
             [pagination]="swiperSlidePagination"
             [slidesPerView]="'auto'"
-            [spaceBetween]="20"
+            [spaceBetween]="10"
             [breakpoints]="swiperSlideBreakpoints"
     >
-    <!--    <div class="card-slide-wrapper">-->
-      <ng-template swiperSlide>
-        <app-rectangle-rounded-card cardNumber="1" cardName="Clareza" cardText="Passar o conteúdo da sua mensagem de forma clara  e consciente."></app-rectangle-rounded-card>
+      <ng-template swiperSlide *ngFor="let card of areas">
+        <app-rectangle-rounded-card [cardNumber]="card.cardNumber" [cardNumberBg]="card.cardNumberBg" [cardName]="card.cardName" [cardText]="card.cardText" [cardBg]="card.cardBg"></app-rectangle-rounded-card>
       </ng-template>
     </swiper>
-<!--    </div>-->
 
   </div>
 </section>

@@ -83,11 +83,11 @@ export class ResultsComponent implements OnInit {
   public swiperSlideBreakpoints = {
     '320': {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 10
     },
-    '768': {
+    /*'768': {
       slidesPerView: 3,
-    }
+    }*/
   }
 
   public swiperSlidePagination = {
@@ -102,12 +102,17 @@ export class ResultsComponent implements OnInit {
     pointsLabel: '',
   }
 
+  public finishedAt = '';
+  public strengths: any[] = [];
+  public areas: any[] = [];
+
   constructor(private api: ApiRequestsService) {
 
     this.api.getDataFromApi().subscribe((data: any) => {
       this.certificateData = data.results.certificate;
-      // this.improveYourselfCards = data.activities.improveYourself;
-      // this.recomendedContentSlides = data.activities.recomendedContents;
+      this.finishedAt = data.results.feedback.finishedAt;
+      this.strengths = data.results.strengths;
+      this.areas = data.results.areas;
     });
 
     this.chartOptions = {

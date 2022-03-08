@@ -4,9 +4,9 @@
   display: flex;
   border-bottom: #F2F3F5 solid 2px;
   padding: 0 20px;
-  overflow: auto;
 
   @media #{$xs} {
+    overflow: hidden;
     padding-left: 0;
   }
 
