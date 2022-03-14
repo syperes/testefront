@@ -1,0 +1,49 @@
+<div class="banner">
+    <h3 class="banner-title">Comunicação Eficaz</h3>
+    <h5 class="banner-subtitle">Pessoas fazendo a trilha</h5>
+    <div class="subtitle-button">
+        <button mat-fab color="primary" aria-label="Example" class="subtitle-button-size">
+            <div class="button-text">
+                BS
+            </div>
+        </button>
+    </div>
+    <div class="subtitle-button-2">
+        <button mat-fab color="primary" aria-label="Example" class="subtitle-button-size-2">
+            <div class="button-text">
+                AT
+            </div>
+        </button>
+    </div>
+    <div class="subtitle-button-3">
+        <button mat-fab color="primary" aria-label="Example" class="subtitle-button-size-3">
+            <div class="button-text">
+                GR
+            </div>
+        </button>
+    </div>
+    <h4 class="banner-progress">Progresso</h4>
+    <div class="spinner-container">
+        <div class="progress-spinner-bg">
+            <mat-progress-spinner class="progress-spinner" [mode]="'determinate'" [value]="'50'">
+            </mat-progress-spinner>
+        </div>
+    </div>
+    <div class="spinner-container">
+        <div class="progress-spinner-color">
+            <mat-progress-spinner class="progress-spinner" [mode]="'determinate'" [value]="'25'">
+            </mat-progress-spinner>
+        </div>
+    </div>
+    <h3 class="banner-percentage">25%</h3>
+</div>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let tab of tabs" (click)="activeLink = tab" [active]="activeLink == tab"
+        [routerLink]="tab" routerLinkActive="active">
+        {{tab}}
+    </a>
+    <a mat-tab-link disabled>
+        Plano de desenvolvimento
+    </a>
+</nav>
+<router-outlet></router-outlet>
