@@ -1,0 +1,103 @@
+<div class="activities">
+  <p class="activities__title title-pillars">Pilares da Comunicação Eficaz</p>
+
+  <div class="activities__items-pillars">
+    <div
+      [ngClass]="{ active: item.active }"
+      class="activities__items-pillars--item"
+      *ngFor="let item of pillars"
+    >
+      <img [src]="item.icon" />
+      <span>{{ item.title }}</span>
+    </div>
+  </div>
+
+  <p class="activities__title">Descubra mais sobre você</p>
+
+  <div class="activities__card-find">
+    <div class="content-flex">
+      <div class="activities__card-find--circle-number">
+        <span>{{ aboutYou.icon }}</span>
+      </div>
+      <div class="activities__card-find--block">
+        <div class="label-card">{{ aboutYou.tag }}</div>
+        <span class="title"> {{ aboutYou.title }}</span>
+        <span class="time">
+          <img src="../../../assets/images/time.svg" alt="" />{{
+            aboutYou.time
+          }}</span
+        >
+      </div>
+    </div>
+
+    <div class="activities__card-find--bg-image">
+      <img
+        [src]="
+          isMobile()
+            ? './../../../assets/images/mobile-alert.svg'
+            : './../../../assets/images/desk-alert.svg'
+        "
+        alt=""
+      />
+    </div>
+  </div>
+
+  <p class="activities__title">Desenvolva suas habilidades</p>
+
+  <div class="activities__card-skill" *ngFor="let item of skills">
+    <img
+      class="heart-dark"
+      [ngClass]="{ active: item.isFavorite }"
+      src="../../../assets/images/heart-dark.svg"
+      alt=""
+    />
+
+    <img
+      *ngIf="item.withDetails"
+      class="arrow-right"
+      src="../../../assets/images/arrow-right.svg"
+      alt=""
+    />
+
+    <div class="activities__card-skill--circle-number">
+      <span>
+        <img [src]="item.icon" />
+      </span>
+    </div>
+
+    <div class="activities__card-skill--block">
+      <span class="label-card">{{ item.tag }}</span>
+      <span class="title">{{ item.title }}</span>
+      <span class="time">
+        <img src="../../../assets/images/time.svg" alt="" /> {{ item.time }}
+      </span>
+    </div>
+  </div>
+
+  <p class="activities__title-recommended">Conteúdos recomendados</p>
+
+  <swiper
+    [pagination]="swiperSlidePagination"
+    [slidesPerView]="'auto'"
+    [spaceBetween]="5"
+  >
+    <ng-template swiperSlide *ngFor="let item of recommended">
+      <div class="activities__items-recommended--item">
+        <img class="image-item-banner" [src]="item.image" alt="" />
+        <div class="item-infos">
+          <img class="icon" [src]="item.icon" alt="" />
+          <p class="title">{{ item.title }}</p>
+          <p class="subtitle">{{ item.subtitle }}</p>
+
+          <div class="flex-item">
+            <a href="#">Ler mais</a>
+
+            <img src="../../../assets/images/save-icon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+
+  <div class="activities__items-recommended"></div>
+</div>
