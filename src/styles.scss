@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+html {
+  .mobile--hidden {
+    display: none !important;
+
+    @media (min-width: 1024px) {
+      display: flex !important;
+    }
+  }
+
+  .desktop--hidden {
+    display: none !important;
+
+    @media (max-width: 1024px) {
+      display: flex !important;
+    }
+  }
+
+  .h-full {
+    height: 100%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: 1024px) {
+    max-width: 676px;
+  }
+
+  .swiper-wrapper {
+    display: flex !important;
+    margin-bottom: 10px;
+  }
+}
+
+.swiper-pagination {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+   display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #9da0a8 !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #e9eaec;
+    display: flex;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+}

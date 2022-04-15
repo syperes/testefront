@@ -1,0 +1,135 @@
+<div class="results">
+  <div class="results__fly-card">
+    <img class="seal" [src]="result.status.medal" />
+    <p class="results__fly-card__title">{{ result.status.title }}</p>
+    <div class="results__fly-card__points">
+      <div class="d-flex">
+        <img src="../../../assets/images/wings.svg" alt="" />
+        <div class="flex-points">
+          <p class="results__fly-card__value">{{ result.status.current }}</p>
+          <p class="results__fly-card__value results__fly-card__value--max">
+            / {{ result.status.max }} Flys
+          </p>
+        </div>
+      </div>
+      <div class="results__fly-card__points__progress">
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <p class="results__title-completed">Completado {{ result.completedDate }}</p>
+
+  <div class="results__content-comunication">
+    <img [src]="result.skillFailed.icon" />
+    <div>
+      <p class="results__content-comunication__title">
+        {{ result.skillFailed.title }}
+      </p>
+      <p class="results__content-comunication__subtitle">
+        {{ result.skillFailed.subtitle }}
+      </p>
+    </div>
+  </div>
+
+  <div class="results__skill-filed">
+    <p class="results__skill-filed__description">
+      {{ result.skillFailed.description }}
+    </p>
+
+    <div class="results__skill-filed__flex">
+      <img src="../../../assets/images/forces.svg" alt="" />
+      <p class="results__skill-filed__flex__title">Suas forças</p>
+    </div>
+
+    <div class="results__skill-filed__items">
+      <div
+        class="results__skill-filed__items--item"
+        *ngFor="let item of result.forces; let i = index"
+      >
+        <div class="flex">
+          <p class="number-circle">{{ i + 1 }}</p>
+          <p class="title">{{ item.title }}</p>
+        </div>
+
+        <p class="subtitle">{{ item.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full">
+    <div class="results__skill-filed__flex">
+      <img src="../../../assets/images/hand-holding-seedling.svg" alt="" />
+      <p class="results__skill-filed__flex__title">
+        Suas áreas de desenvolvimento
+      </p>
+    </div>
+
+    <div>
+      <div
+        class="results__skill-filed__items--item development-card"
+        *ngFor="let item of result.development; let i = index"
+      >
+        <div class="flex">
+          <p class="number-circle">{{ i + 1 }}</p>
+          <p class="title">{{ item.title }}</p>
+        </div>
+        <p class="subtitle">{{ item.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="results__graphs-area">
+    <p class="results__graphs-area__title">
+      Explore seus resultados em cada pilar
+    </p>
+    <div class="flex">
+      <div class="results__graphs-area__wrap-content">
+        <p *ngFor="let item of result.pillarsText">
+          {{ item.title }}
+        </p>
+      </div>
+
+      <img src="../../../assets/images/chart.svg" />
+    </div>
+  </div>
+
+  <div class="activities__items">
+    <div
+      [ngClass]="{ active: item.active }"
+      class="activities__items--item"
+      *ngFor="let item of result.pillars"
+    >
+      <img [src]="item.icon" />
+      <span>{{ item.title }}</span>
+    </div>
+  </div>
+
+  <div class="results__communication">
+    <p class="title">{{ result.pillarToday.title }}</p>
+
+    <div class="wrapper-subtitle">
+      <img class="icon-pillar" [src]="result.pillarToday.icon" />
+
+      <p>{{ result.pillarToday.subtitle }}</p>
+      <img class="icon-total" [src]="result.pillarToday.total" alt="" />
+    </div>
+
+    <p class="pillar-description">
+      {{ result.pillarToday.description }}
+      <a href="#">Ver relatório completo</a>
+    </p>
+  </div>
+
+  <div class="results__box">
+    <img src="../../../assets/images/success.svg" />
+    <p>
+      Com seus resultados em mãos, é hora de criar seu plano de desenvolvimento
+      para colocar em prática os conceitos, recursos e dicas que aprendemos ao
+      longo da trilha.
+    </p>
+  </div>
+
+  <button>Ver meu plano</button>
+</div>

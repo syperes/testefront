@@ -1,0 +1,9 @@
+<div class="container">
+  <a
+    class="tab"
+    *ngFor="let tab of tabs; let i = index"
+    [routerLink]="tab.routerLink"
+    routerLinkActive="active"
+    >{{ tab.title }}</a
+  >
+</div>

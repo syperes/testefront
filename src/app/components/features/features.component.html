@@ -1,0 +1,56 @@
+<div class="container">
+  <img
+    class="features"
+    [src]="
+      isMobile()
+        ? './../../../assets/images/features-mobile.svg'
+        : './../../../assets/images/features.svg'
+    "
+    alt=""
+  />
+
+  <div class="feature__container">
+    <div class="feature__container__communication">
+      <span class="title"
+        >Comunicação Eficaz <img src="./../../../assets/images/help.svg"
+      /></span>
+
+      <div class="feature__container__communication__trail">
+        <span class="subtitle">Pessoas fazendo a trilha</span>
+
+        <div class="feature__container__communication__trail__items">
+          <div
+            class="item"
+            [ngStyle]="{ 'background-color': item.color }"
+            *ngFor="let item of getLastsTrail(); trackBy: trackByFn"
+          >
+            {{ item.name.charAt(0) }}{{ item.secondNane.charAt(0) }}
+          </div>
+          <span>+ {{ this.peoplesInTrail.length - 3 }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature__container__progress">
+      <span class="title">Progresso</span>
+
+      <div class="chart">
+        <round-progress
+          [current]="progress"
+          [max]="100"
+          [rounded]="true"
+          [semicircle]="true"
+          [rounded]="true"
+          [radius]="125"
+          [stroke]="22"
+          [responsive]="true"
+          color="#FA8B09"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="0"
+        ></round-progress>
+
+        <p class="count">{{ progress }}%</p>
+      </div>
+    </div>
+  </div>
+</div>
